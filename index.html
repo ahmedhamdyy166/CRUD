@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/fontawesome.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container py-5">
+
+            <h3 class="text-center">CRUD Project</h3>
+        
+        <label for="productname">ProductName</label>
+        <input type="text" class="form-control" id="productname">
+
+        <label for="productprice">ProductPrice</label>
+        <input type="text" class="form-control" id="productprice">
+
+        <label for="productcategory">ProductCategory</label>
+        <input type="text" class="form-control" id="productcategory">
+
+        <label for="productdescription">ProductDesc</label>
+        <textarea type="text" class="form-control" id="productdescription"></textarea>
+
+        <button id="addBtn" onclick="addProduct()" class="btn btn-outline-info mt-4 d-block">Add Product</button>
+        <button id="updateBtn" class="btn d-block btn-outline-warning d-none mt-4 ">Update Product</button>
+
+        </div>
+
+            <div class="w-75 mx-auto my-3">
+
+            <input type="text" oninput="SearchProducts(this.value)" class="form-control mb-5 " id="SearchInput" placeholder="Search by name">
+        <table class="table text-center">
+            <thead>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tableofproductbody">
+                
+            </tbody>
+        </table>
+            </div>
+    
+
+        <script src="index.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
